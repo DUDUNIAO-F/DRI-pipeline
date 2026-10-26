@@ -16,6 +16,7 @@ DRI-pipeline/
 ├── 04_survival_analysis.R
 ├── 05_external_validation.R
 ├── 06_functional_enrichment.R
+├── 07_spatial_analysis.R
 └── run_all.sh
 ```
 
@@ -29,10 +30,11 @@ Place the following in `data/`:
 | THCA_mc3_gene_level.txt.gz | UCSC Xena |
 | TCGA-THCA_FULL_merged_with_CDR.tsv | tcga-gdc-downloader |
 | GSE65144/GSE33630/GSE29265_series_matrix.txt.gz | GEO |
+| GSE250521_* | GEO (spatial transcriptomics, Visium) |
 
 ## Software
 
-R 4.5.2; WGCNA, GSVA, tidyestimate, mediation, survival, survminer, timeROC, rms, clusterProfiler, GEOquery, hgu133plus2.db
+R 4.5.2; WGCNA, GSVA, tidyestimate, mediation, survival, survminer, timeROC, rms, clusterProfiler, GEOquery, hgu133plus2.db, ape
 
 ## Usage
 

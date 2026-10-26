@@ -7,4 +7,6 @@ echo "Step 3"; Rscript 03_mediation_analysis.R
 echo "Step 4"; Rscript 04_survival_analysis.R
 echo "Step 5"; Rscript 05_external_validation.R
 echo "Step 6"; Rscript 06_functional_enrichment.R
+echo "Step 7: Spatial analysis"
+Rscript 07_spatial_analysis.R
 echo "Done"
