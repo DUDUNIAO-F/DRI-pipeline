@@ -31,9 +31,10 @@ source("DRI_core.R")
 #   anchor_gene = "NSUN2"                  # Anchor enzyme (can be changed)
 # )
 
-🌐 Web Interface (Shiny App)
-
-For non-computational users, a Shiny app is provided in app.R. You can run it locally by executing shiny::runApp("app.R") or use it to calculate DRI by uploading a standard bulk RNA-seq CSV matrix via a user-friendly interface.
+## 🌐 Web Interface (Shiny App)
+For non-computational users, we have deployed a cloud-based Shiny app for one-click DRI calculation. 
+**Online Access:** [https://thca.shinyapps.io/dri-pipeline/](https://thca.shinyapps.io/dri-pipeline/)
+You can also run it locally by executing `shiny::runApp("app.R")`.
 
 ## Directory structure
 
