@@ -14,6 +14,23 @@ source("run_example.R")
 
 The DRI_core.R file contains the parameterized calculate_DRI() function. It allows users to apply the framework to any cancer type by providing a user-defined differentiation gene list and an anchor gene (default: NSUN2).
 
+### Example: Cross-cancer applicability
+Although DRI was calibrated in thyroid cancer, the framework is fundamentally parameter-agnostic. Below is an example of how to apply the same core function to breast cancer by substituting the differentiation gene list (e.g., ER/PR/HER2):
+
+```R
+# Load the core function
+source("DRI_core.R")
+
+# Load your breast cancer bulk expression matrix (rows = genes, columns = samples)
+# my_brca_matrix <- read.csv("brca_data.csv", row.names = 1)
+
+# Calculate DRI using a custom breast cancer differentiation signature
+# res_brca <- calculate_DRI(
+#   expr_mat = my_brca_matrix, 
+#   tds_genes = c("ESR1", "PGR", "ERBB2"), # Custom differentiation genes
+#   anchor_gene = "NSUN2"                  # Anchor enzyme (can be changed)
+# )
+
 🌐 Web Interface (Shiny App)
 
 For non-computational users, a Shiny app is provided in app.R. You can run it locally by executing shiny::runApp("app.R") or use it to calculate DRI by uploading a standard bulk RNA-seq CSV matrix via a user-friendly interface.
