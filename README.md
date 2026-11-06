@@ -3,6 +3,20 @@
 Code accompanying the manuscript:
 
 **A tRNA Regulatory Index (DRI) quantifies tsRNA network activity and positions it as a downstream mediator of MAPK-driven dedifferentiation in thyroid cancer**
+---
+## 🚀 Quick Start (5-second test)
+Clone this repository and run the following command in R. It will generate a simulated dataset, compute the DRI score, and output the results instantly. No external data is required.
+
+```R
+source("run_example.R")
+
+🧩 Core Function
+
+The DRI_core.R file contains the parameterized calculate_DRI() function. It allows users to apply the framework to any cancer type by providing a user-defined differentiation gene list and an anchor gene (default: NSUN2).
+
+🌐 Web Interface (Shiny App)
+
+For non-computational users, a Shiny app is provided in app.R. You can run it locally by executing shiny::runApp("app.R") or use it to calculate DRI by uploading a standard bulk RNA-seq CSV matrix via a user-friendly interface.
 
 ## Directory structure
 
