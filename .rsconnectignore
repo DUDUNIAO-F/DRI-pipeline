@@ -1,0 +1,26 @@
+# Files/folders excluded from shinyapps.io deployment
+data/
+output/
+*.bak
+*.Rhistory
+*.RData
+.DS_Store
+.Rproj.user/
+rsconnect/
+01_*.R
+02_*.R
+03_*.R
+04_*.R
+05_*.R
+06_*.R
+07_*.R
+08_*.R
+09_*.R
+10_*.R
+11_*.R
+make_template.R
+run_all.sh
+run_example.R
+DRI_example_results.csv
+DRI_core.R.bak
+app.R.bak
