@@ -1,7 +1,7 @@
 # 11_spatial_random_control.R
 # Purpose: Spatial DRI vs permutation null (GSE250521)
 # Input  : data/GSE250521_RAW/ Visium files, data/DRI_genes.txt
-# Output : output/Table_S14_spatial_null.csv, output/Fig_S8_spatial_null.pdf
+# Output : output/Table_S14_spatial_null.csv, output/Fig_4E_spatial_null.pdf
 suppressPackageStartupMessages({
   library(Seurat); library(ape); library(Matrix); library(ggplot2); library(data.table)
 })
@@ -113,8 +113,8 @@ if (nrow(results) > 0) {
          subtitle = paste0(n_perm, " spatial permutations of depth-corrected DRI residuals"),
          color = "") +
     theme_bw() + theme(axis.text.x = element_text(angle = 45, hjust = 1))
-  ggsave(file.path(out_dir, "Fig_S8_spatial_null.pdf"), p, width = 9, height = 5)
-  cat("Done: Table S14 and Fig S8 saved to", out_dir, "\n")
+  ggsave(file.path(out_dir, "Fig_4E_spatial_null.pdf"), p, width = 9, height = 5)
+  cat("Done: Table S14 and Fig 4E saved to", out_dir, "\n")
 } else {
   warning("No samples passed filters; no output written.")
 }

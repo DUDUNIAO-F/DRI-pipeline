@@ -1,7 +1,7 @@
 # 10_downsampling.R
 # Purpose: Gene-coverage-matched downsampling in bulk TCGA (FPKM)
 # Input  : data/HiSeqV2.tsv (UCSC Xena TCGA-THCA FPKM), data/DRI_genes.txt
-# Output : output/Table_S13_downsampling.csv, output/Fig_S7_downsampling.pdf
+# Output : output/Table_S13_downsampling.csv, output/Fig_4A_downsampling.pdf
 suppressPackageStartupMessages({ library(ggplot2); library(data.table) })
 
 # ---- Portable project root ----
@@ -61,5 +61,5 @@ p <- ggplot(data.frame(Rho = rho_down), aes(x = Rho)) +
                           format(n_single, big.mark = ","),
                           format(length(dri_avail), big.mark = ","), n_iter)) +
   theme_bw()
-ggsave(file.path(out_dir, "Fig_S7_downsampling.pdf"), p, width = 7, height = 5)
-cat("Done: Table S13 and Fig S7 saved to", out_dir, "\n")
+ggsave(file.path(out_dir, "Fig_4A_downsampling.pdf"), p, width = 7, height = 5)
+cat("Done: Table S13 and Fig 4A saved to", out_dir, "\n")
