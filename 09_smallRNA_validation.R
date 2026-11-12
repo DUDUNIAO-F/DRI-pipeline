@@ -2,7 +2,7 @@
 # Purpose: Independent small RNA-seq validation (9 metastatic vs 9 primary)
 # Input  : M_vs_Primary_PTC.xlsx
 # Output : output/Table_S11_tsRNA_activity_score.csv, Table_S12_mt_signature_score.csv
-#          output/Fig_S6_tsRNA_validation.pdf, Fig_S7_mt_signature.pdf
+#          output/Fig_2A_tsRNA_validation.pdf, Fig_2E_mt_signature.pdf
 suppressPackageStartupMessages({
   library(readxl); library(ggplot2); library(effsize); library(data.table)
 })
@@ -51,7 +51,7 @@ p1 <- ggplot(data.frame(Sample = sample_names, Group = group, Score = score),
   geom_boxplot(width = 0.4, alpha = 0.6, outlier.shape = NA) +
   geom_jitter(width = 0.1, size = 3, aes(color = Group)) + theme_bw() +
   labs(title = "tsRNA activity score (top 50% variable)", y = "Score (mean z-score)")
-ggsave(file.path(out_dir, "Fig_S6_tsRNA_validation.pdf"), p1, width = 6, height = 5)
+ggsave(file.path(out_dir, "Fig_2A_tsRNA_validation.pdf"), p1, width = 6, height = 5)
 
 # ---- Focused mt-tsRNA signature ----
 sig_ids <- c("mt-tRF3-27-LysTTT","mt-tRF3-21-LysTTT","mt-tRF3-37-LysTTT",
@@ -87,5 +87,5 @@ p2 <- ggplot(data.frame(Sample = sample_names, Group = group, Score = sig_score)
   geom_jitter(width = 0.1, size = 3, aes(color = Group)) + theme_bw() +
   labs(title = "mt-tsRNA signature score (10 pan-metastasis mt-tsRNAs)",
        y = "Score (mean z-score)")
-ggsave(file.path(out_dir, "Fig_S7_mt_signature.pdf"), p2, width = 6, height = 5)
+ggsave(file.path(out_dir, "Fig_2E_mt_signature.pdf"), p2, width = 6, height = 5)
 cat("Done: Tables S11/S12 and Figs S6/S7 saved to", out_dir, "\n")
